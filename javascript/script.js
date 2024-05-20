@@ -3,6 +3,7 @@
 const hamburgerMenu = document.getElementById('hamburger-menu')
 const mobileNav = document.getElementById('mobile-nav')
 const overlay = document.getElementById('overlay')
+const closeBtn = document.getElementById('close-btn')
 
 hamburgerMenu.addEventListener('click', () => {
     mobileNav.classList.toggle('show')
@@ -12,4 +13,19 @@ hamburgerMenu.addEventListener('click', () => {
 overlay.addEventListener('click', () => {
     mobileNav.classList.remove('show')
     overlay.classList.remove('show')
+})
+
+closeBtn.addEventListener('click', () => {
+    mobileNav.classList.remove('show')
+    overlay.classList.remove('show')
+})
+
+const dropdownBtn = document.getElementById('dropdown-btn');
+const dropdownContent = document.querySelector('.dropdown-content');
+const dropdownArrow = document.getElementById('dropdown-arrow')
+
+dropdownBtn.addEventListener('click', () => {
+    dropdownContent.classList.toggle('show')
+    dropdownArrow.classList.toggle('flipped')
+
 })

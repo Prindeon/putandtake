@@ -7,28 +7,59 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-
+<!-----------------------------------------
+    Sticky navbar at the top
+------------------------------------------->
     <nav class="navbar">
-        <div class="logo">
-            <img src="images/logo-1.png" alt="Nørreris Put and Take logo">
-            <span class="logo-text">Nørreris<br>Put<span class="orange">&</span>Take</span>
-        </div>
-        <div class="hamburger-menu" id="hamburger-menu">
-            &#9776;
-        </div>
+            <div class="navbar-logo">
+                <img src="images/putandtake-logo-hd.webp" alt="Nørreris Put and Take logo">
+                <span class="logo-text">Nørreris<br>Put<span class="orange">&</span>Take</span>
+            </div>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="bar"></div>
+            </div>
     </nav>
 
-    
+<!-----------------------------------------
+    Slide-in nav-menu
+------------------------------------------->
     <div class="overlay show" id="overlay"></div>
     <nav class="mobile-nav show" id="mobile-nav">
+        <!-- closing button -->
+        <button id="close-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M31.3742 29.1258C31.6739 29.4231 31.8425 29.8278 31.8425 30.25C31.8425 30.6722 31.6739 31.0769 31.3742 31.3742C31.0769 31.6739 30.6722 31.8425 30.25 31.8425C29.8278 31.8425 29.4231 31.6739 29.1258 31.3742L16 18.2325L2.87415 31.3742C2.57685 31.6739 2.17216 31.8425 1.74998 31.8425C1.32781 31.8425 0.923115 31.6739 0.625818 31.3742C0.326073 31.0769 0.157471 30.6722 0.157471 30.25C0.157471 29.8278 0.326073 29.4231 0.625818 29.1258L13.7675 16L0.625818 2.87417C0.224192 2.47254 0.0673392 1.88716 0.214344 1.33853C0.36135 0.789899 0.78988 0.361369 1.33851 0.214364C1.88714 0.0673586 2.47253 0.224211 2.87415 0.625838L16 13.7675L29.1258 0.625838C29.7467 0.00497741 30.7533 0.00497741 31.3742 0.625838C31.995 1.2467 31.995 2.25331 31.3742 2.87417L18.2325 16L31.3742 29.1258Z" fill="#231F20"/>
+            </svg>
+        </button>
+        <!-- nav links -->
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a class="bold" href="index.html">Hjem</a></li>
+            <!-- the 'discover' dropdown menu -->
+            <li class="menu-dropdown">
+                <a href="#" id="dropdown-btn">Opdag <span id="dropdown-arrow">&#9662;</span></a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Vores Søer</a></li>
+                    <li><a href="#">Vores Fisk</a></li>
+                    <li><a href="#">Vores Faciliteter</a></li>
+                    <li><a href="#">Overnatning</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Priser og regler</a></li>
+            <li><a href="#">Fiskeudsætning</a></li>
+            <li><a href="#">Galleri</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Kontakt</a></li>
         </ul>
+        <!-- blue triangle style at bottom-->
+        <svg class="sidebar-triangle" xmlns="http://www.w3.org/2000/svg" width="283" height="326" viewBox="0 0 283 326" fill="none">
+            <path d="M283 0.319092L-48.9976 326H283V0.319092Z" fill="#D4E6FF"/>
+        </svg>
     </nav>
 
+    <!-- hero section -->
+    <main>
+        <p> Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet <br> <br><br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br>Lorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet</p>
+    </main>
 <script src="javascript/script.js"></script>
 </body>
 </html>

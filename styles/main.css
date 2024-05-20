@@ -6,40 +6,97 @@
     --light-blue: #D4E6FF;
     --dark-blue: #2C3E50;
 }
-
 body {
     margin: 0;
+    padding: 0;
     font-family: "Work Sans", sans-serif;
+}
+.spacer {
+    flex-grow: 9999s;
+}
+.bold {
+    font-weight: bold;
+    font-weight: 700;
+}
+h1 {
+    font-size: 32px;
+}
+h2 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 117.189%; /* 23.438px */
+}
 
+/* ---------------------------------------
+Sticky navbar at the top 
+------------------------------------------ */
+.navbar {
+    position: sticky;
+    width: 100vw;
+    height: 64px; 
+    padding: 16px 0px 8px 0px;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    background-color: #D4E6FF;
+}
+.navbar-logo {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.navbar-logo img {
+    height: 100%;
 }
 .logo-text {
     font-size: 20px;
     font-weight: 700;
 }
+
+/* three line burger menu */
+.hamburger-menu {
+    position: relative;
+    width: 34px;
+    height: 24px;
+    cursor: pointer;
+    background: #FFF;
+    margin-right: 40px;
+    
+}
+.bar, .bar::before, .bar::after {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+.bar::before {
+    content: '';
+    top: 12px;
+}
+.bar {
+    content: '';
+    top: 0px;
+}
+.bar::after {
+    content: '';
+    top: 24px;
+}
+
+/* addon class for orange text */
 .orange {
     color: var(--orange);
 }
 
-.navbar {
-    position: sticky;
-    top: 0;
-    width: 100vw;
-    padding: 16px 40px 5px 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-}
-
-.hamburger-menu {
-    font-size: 30px;
-    cursor: pointer;
-    padding: 10px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
-
+/* ---------------------------------------
+Slide-in nav-menu
+------------------------------------------ */
+/* This adds the dark background overlay, which is also clickable, refer to script.js */
 .overlay {
     position: fixed;
     top: 0;
@@ -49,54 +106,75 @@ body {
     background: rgba(0, 0, 0, 0.5);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s;
+    transition: opacity 0.4s;
 }
-
+.overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
 .mobile-nav {
     position: fixed;
     top: 0;
-    right: -60%;
-    width: 60%;
+    right: -280px;
+    width: 280px;
     height: 100%;
     background-color: white;
     color: white;
-    transition: right 0.3s;
+    transition: right 0.4s;
 }
-
+.mobile-nav.show {
+    right: 0;
+}
 .mobile-nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
-
 .mobile-nav ul li {
-    padding: 15px;
+    width: 100%;
+    padding-left: 15px;
+    
 }
-
 .mobile-nav ul li a {
-    padding: 15px 0;
+    display: block;
+    padding: 12px;
     color: black;
     text-decoration: none;
-    width: 100%;
+    font-size: 20px;
+}
+.sidebar-triangle {
+    position: fixed;
+    bottom: 0;
+    pointer-events: none;
+    z-index: -1;
 }
 
-.mobile-nav.show {
-    right: 0;
-}
-
-.overlay.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-.hamburger-menu {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 30px;
-    height: 25px;
+/* cross button to close the nav-menu */
+#close-btn {
+    margin-top: 32px;
+    padding: 0;
+    position: relative;
+    left: 208px;
+    background: none;
+    border: none;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+
+/* dropdown in sidebar */
+.dropdown-content {
+    display: none;
+}
+/* Dropdown links with left border */
+.dropdown-content li a {
+    border-left: 6px solid var(--light-blue);
+}
+.dropdown-content.show {
+    display: block;
+}
+#dropdown-arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+.flipped {
+    transform: rotate(180deg) translateY(-4px);
 }
