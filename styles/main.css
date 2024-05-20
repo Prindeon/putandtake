@@ -26,6 +26,15 @@ h2 {
     font-weight: 500;
     line-height: 117.189%; /* 23.438px */
 }
+/* ensures logo size never exceeds the container */
+.logo-img {
+    width: 100%;
+    height: 100%;
+}
+/* makes every logo clickable, given this class is added to the element - refer to script.js */
+.logo {
+    cursor: pointer;
+}
 
 /* ---------------------------------------
 Sticky navbar at the top 
@@ -56,6 +65,7 @@ Sticky navbar at the top
 .logo-text {
     font-size: 20px;
     font-weight: 700;
+    color: black;
 }
 
 /* three line burger menu */
@@ -133,14 +143,13 @@ Slide-in nav-menu
 .mobile-nav ul li {
     width: 100%;
     padding-left: 15px;
-    
 }
 .mobile-nav ul li a {
     display: block;
     padding: 12px;
     color: black;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
 }
 .sidebar-triangle {
     position: fixed;
@@ -159,7 +168,6 @@ Slide-in nav-menu
     border: none;
     cursor: pointer;
 }
-
 /* dropdown in sidebar */
 .dropdown-content {
     display: none;
@@ -176,5 +184,35 @@ Slide-in nav-menu
     transition: transform 0.3s ease;
 }
 .flipped {
-    transform: rotate(180deg) translateY(-4px);
+    transform: rotate(180deg) translateY(-3px);
+}
+/* Language selector */
+.language-selector {
+    position: absolute;
+    display: none;
+    top: 400px;
+    margin-left: 15px;
+}
+.language-selector.show {
+    display: flex;
+}
+.language-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 16px;
+}
+.language-code {
+    color: black;
+}
+.small-logo {
+    height: 62px;
+    display: flex;
+    align-items: center;
+}
+.mobile-nav .small-logo {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
