@@ -30,8 +30,16 @@ const languageSelector = document.querySelector('.language-selector')
 dropdownBtn.addEventListener('click', () => {
     dropdownContent.classList.toggle('show')
     dropdownArrow.classList.toggle('flipped')
-    languageSelector.classList.toggle('show')
+    
+    if (!languageSelector.classList.contains('show')) {
+        setTimeout(() => {
+            languageSelector.classList.add('show')
+        }, 250)
+    } else {
+        languageSelector.classList.remove('show')
+    }
 })
+
 
 
 //----------------------------------------------------------------------------------------------------|

@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* global styling */
+/* ---------------------------------------
+global styling 
+------------------------------------------ */
 :root {
     --orange: #FF6852;
     --light-blue: #D4E6FF;
@@ -11,6 +13,7 @@ body {
     padding: 0;
     font-family: "Work Sans", sans-serif;
 }
+/* if added in a div, this pushes all other elements as far away as possible  */
 .spacer {
     flex-grow: 9999s;
 }
@@ -26,6 +29,10 @@ h2 {
     font-weight: 500;
     line-height: 117.189%; /* 23.438px */
 }
+/* addon class for orange text */
+.orange {
+    color: var(--orange);
+}
 /* ensures logo size never exceeds the container */
 .logo-img {
     width: 100%;
@@ -34,6 +41,11 @@ h2 {
 /* makes every logo clickable, given this class is added to the element - refer to script.js */
 .logo {
     cursor: pointer;
+}
+.small-logo {
+    height: 62px;
+    display: flex;
+    align-items: center;
 }
 
 /* ---------------------------------------
@@ -74,7 +86,6 @@ Sticky navbar at the top
     width: 34px;
     height: 24px;
     cursor: pointer;
-    background: #FFF;
     margin-right: 40px;
     
 }
@@ -84,6 +95,7 @@ Sticky navbar at the top
     background-color: black;
     position: absolute;
     transition: all 0.3s ease;
+    border-radius: 2px;
 }
 .bar::before {
     content: '';
@@ -96,11 +108,6 @@ Sticky navbar at the top
 .bar::after {
     content: '';
     top: 24px;
-}
-
-/* addon class for orange text */
-.orange {
-    color: var(--orange);
 }
 
 /* ---------------------------------------
@@ -151,13 +158,13 @@ Slide-in nav-menu
     text-decoration: none;
     font-size: 18px;
 }
+/* weird blue triangle thing in side bar */
 .sidebar-triangle {
     position: fixed;
     bottom: 0;
     pointer-events: none;
     z-index: -1;
 }
-
 /* cross button to close the nav-menu */
 #close-btn {
     margin-top: 32px;
@@ -170,7 +177,10 @@ Slide-in nav-menu
 }
 /* dropdown in sidebar */
 .dropdown-content {
-    display: none;
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
 }
 /* Dropdown links with left border */
 .dropdown-content li a {
@@ -178,6 +188,7 @@ Slide-in nav-menu
 }
 .dropdown-content.show {
     display: block;
+    max-height: 180px;
 }
 #dropdown-arrow {
     display: inline-block;
@@ -189,12 +200,18 @@ Slide-in nav-menu
 /* Language selector */
 .language-selector {
     position: absolute;
-    display: none;
+    display: flex;
+    opacity: 0;
     top: 400px;
     margin-left: 15px;
+    transition: all 0.3s ease;
+}
+.language-selector a {
+    text-decoration: none;
 }
 .language-selector.show {
-    display: flex;
+    opacity: 1;
+    transition: all 0.3s ease;
 }
 .language-item {
     display: flex;
@@ -204,11 +221,6 @@ Slide-in nav-menu
 }
 .language-code {
     color: black;
-}
-.small-logo {
-    height: 62px;
-    display: flex;
-    align-items: center;
 }
 .mobile-nav .small-logo {
     position: absolute;
