@@ -61,12 +61,16 @@ p {
   background-color: white;
   color: #FF6852;
   font-weight: bold;
-  font-size: 24px;
+  height: 50px;
+  width: 50px;
+  font-size: 30px;
   transition: 0.4s ease;
-  border-radius: 50px;
+  border-radius: 50%;
   user-select: none;
   box-shadow: 2px 2px 4px #D9D9D9;
-  max-height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .forward {
@@ -169,4 +173,16 @@ a {
 
 h5 {
   font-weight: 300;
+}
+
+.button {
+  background-color: var(--orange);
+  border-width: 0cap;
+  padding: 3vw;
+  text-decoration: none;
+  color: white;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }

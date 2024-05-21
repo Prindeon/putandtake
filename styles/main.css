@@ -24,15 +24,21 @@ body {
 h1 {
     font-size: 32px;
 }
+
 h2 {
     font-size: 20px;
     font-weight: 500;
     line-height: 117.189%; /* 23.438px */
 }
-/* addon class for orange text */
+/* addon class for colorful text */
 .orange {
     color: var(--orange);
 }
+
+.blue {
+    color: var(--dark-blue);
+}
+
 /* ensures logo size never exceeds the container */
 .logo-img {
     width: 100%;
