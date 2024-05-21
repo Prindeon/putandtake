@@ -24,12 +24,16 @@
 <main>
     <h5><a href="index.html">Home</a> > <a href="lakecarousel.html">Our Lakes</a> > Our Fish</h5>
 <h1>Our Fish</h1>
-    <div>
+    <div class="container-of-everything">
 <div class="slideshow-container fade">
 
     <!-- Full images / Content -->
     <div class="Containers">
+      <div class="fish-container">
+        <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
       <img id="fishimg" src="images/golden_danish_trout.webp" alt="danish_golden_trout">
+      <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+    </div>
       <div style="text-align:center">
         <span class="dots" onclick="currentSlide(1)"></span>
         <span class="dots" onclick="currentSlide(2)"></span>
@@ -56,7 +60,12 @@
     </div>
   
     <div class="Containers">
-      <img id="fishimg" src="images/rainbow_trout.webp" alt="rainbow_trout">
+      <div class="fish-container">
+        <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+        <img id="fishimg" src="images/rainbow_trout.webp" alt="rainbow_trout">
+        <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+
       <div style="text-align:center">
         <span class="dots2" onclick="currentSlide(1)"></span>
         <span class="dots2" onclick="currentSlide(2)"></span>
@@ -83,7 +92,11 @@
     </div>
   
     <div class="Containers">
+      <div class="fish-container">
+        <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
       <img id="fishimg" src="images/brook_trout.webp" alt="brook_trout">
+      <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+    </div>
       <div style="text-align:center">
         <span class="dots3" onclick="currentSlide(1)"></span>
         <span class="dots3" onclick="currentSlide(2)"></span>
@@ -110,7 +123,11 @@
     </div>
 
     <div class="Containers">
+      <div class="fish-container">
+        <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
         <img id="fishimg" src="images/river_trout.webp" alt="river_trout">
+        <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+      </div>
         <div style="text-align:center">
             <span class="dots4" onclick="currentSlide(1)"></span>
             <span class="dots4" onclick="currentSlide(2)"></span>
@@ -137,7 +154,11 @@
     </div>
 
       <div class="Containers">
+        <div class="fish-container">
+          <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
         <img id="fishimg" src="images/tiger_trout.webp" alt="rainbow_trout">
+        <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+      </div>
         <div style="text-align:center">
             <span class="dots5" onclick="currentSlide(1)"></span>
             <span class="dots5" onclick="currentSlide(2)"></span>
@@ -164,7 +185,11 @@
     </div>
 
       <div class="Containers">
+        <div class="fish-container">
+          <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
         <img id="fishimg" src="images/arctic_char.webp" alt="rainbow_trout">
+        <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+      </div>
         <div style="text-align:center">
             <span class="dots6" onclick="currentSlide(1)"></span>
             <span class="dots6" onclick="currentSlide(2)"></span>
@@ -191,7 +216,11 @@
     </div>
 
       <div class="Containers">
+        <div class="fish-container">
+          <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
         <img id="fishimg" src="images/lundby_trout.webp" alt="lundby_trout">
+        <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+      </div>
         <div style="text-align:center">
             <span class="dots7" onclick="currentSlide(1)"></span>
             <span class="dots7" onclick="currentSlide(2)"></span>
@@ -214,9 +243,9 @@
     </div>
   
     <!-- Prev and Next buttons -->
+
   </div>
-  <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+
 </div>
   <br>
 

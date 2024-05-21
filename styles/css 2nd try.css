@@ -29,7 +29,7 @@ p {
   align-items: center;
 }
 
-/* Make the images invisible by default */
+/* images invisible by default */
 .Containers {
   display: none;
   position: relative;
@@ -39,24 +39,34 @@ p {
 #fishimg {
     width: 100%;
     border-radius: 12px;
-    margin-bottom: 3vh;
+    position: relative;
+    margin-left: 3vw;
+    margin-right: 3000vw;
 }
 
-/* forward & Back buttons */
+/* forward/Back buttons */
+
+.fish-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-bottom: 3vh;
+}
+
 .Back, .forward {
-    position: absolute;
   cursor: pointer;
-  top: 38%;
-  width: auto;
   padding: 17px;
   background-color: white;
   color: #FF6852;
   font-weight: bold;
-  font-size: 19px;
+  font-size: 24px;
   transition: 0.4s ease;
   border-radius: 50px;
   user-select: none;
   box-shadow: 2px 2px 4px #D9D9D9;
+  max-height: fit-content;
 }
 
 .forward {
@@ -64,7 +74,7 @@ p {
 }
 
 
-/* The circles or bullets indicators */
+/* The dots */
 .dots, .dots2, .dots3, .dots4, .dots5, .dots6, .dots7 {
     cursor: pointer;
     height: 16px;
@@ -87,7 +97,7 @@ p {
     opacity: 0.5;
 }
   
-/* Faint animation */
+/* animation */
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.4s;
@@ -138,6 +148,7 @@ p {
     max-width: 35vw;
     max-height: fit-content;
     border-radius: 12px;
+    margin-right: 5vw;
 }
 
 #buttonsgroup {
@@ -146,4 +157,16 @@ p {
     justify-content: center;
     align-items: center;
     align-self: center;
+}
+
+#readmore {
+    color: #FF6852;
+}
+
+a {
+  color: #2C3E50;
+}
+
+h5 {
+  font-weight: 300;
 }

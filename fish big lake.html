@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Big Lake - Fish</title>
-    <link rel="stylesheet" href="css/css 2nd try.css" />
-    <link rel="stylesheet" href="css/css.css" />
+    <link rel="stylesheet" href="styles/css 2nd try.css" />
+    <link rel="stylesheet" href="styles/css.css" />
   </head>
   <body>
     <!-- navigation -->
@@ -26,7 +26,11 @@
     <div>
 <div class="slideshow-container fade">
 <div class="Containers">
-    <img id="fishimg" src="images/golden_danish_trout.png" alt="danish_golden_trout">
+  <div class="fish-container">
+    <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+    <img id="fishimg" src="images/golden_danish_trout.webp" alt="danish_golden_trout">
+    <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+  </div>
     <div style="text-align:center">
       <span class="dots" onclick="currentSlide(1)"></span>
       <span class="dots" onclick="currentSlide(2)"></span>
@@ -48,7 +52,11 @@
   </div>
 
   <div class="Containers">
-    <img id="fishimg" src="images/rainbow_trout.png" alt="rainbow_trout">
+    <div class="fish-container">
+      <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+    <img id="fishimg" src="images/rainbow_trout.webp" alt="rainbow_trout">
+    <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+  </div>
     <div style="text-align:center">
       <span class="dots2" onclick="currentSlide(1)"></span>
       <span class="dots2" onclick="currentSlide(2)"></span>
@@ -68,12 +76,6 @@
       <img src="" alt="pic5">
     </article>
   </div>
-
-    <!-- Prev and Next buttons -->
-</div>
-<a class="Back" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="forward" onclick="plusSlides(1)">&#10095;</a>
-</div>
 <br>
 
 <!-----------------------------------------
@@ -136,7 +138,7 @@
 </nav>
 
 </main>
-<script src="js/js 2nd try.js"></script>
-<script src="js/js.js"></script>
+<script src="javascript/js 2nd try.js"></script>
+<script src="javascript/js.js"></script>
 </body>
 </html>
