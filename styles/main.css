@@ -132,7 +132,7 @@ Slide-in nav-menu
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.4s;
-    z-index: 2;
+    z-index: 696968;
 }
 .overlay.show {
     opacity: 1;
@@ -147,7 +147,7 @@ Slide-in nav-menu
     background-color: white;
     color: white;
     transition: right 0.4s;
-    z-index: 3;
+    z-index: 696969;
 }
 .mobile-nav.show {
     right: 0;
