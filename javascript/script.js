@@ -52,3 +52,38 @@ brandLogo.forEach(logo => {
         window.location.href = 'index.html'
     })
 })
+
+
+
+
+
+
+
+
+
+
+// script.js
+
+
+    const carouselItems = document.querySelectorAll(".carousel-item");
+    const radioButtons = document.querySelectorAll(".carousel-radio-buttons input[type='radio']");
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        const offset = -index * 100;
+        document.querySelector(".carousel-inner").style.transform = `translateX(${offset}%)`;
+        radioButtons[index].checked = true;
+        currentIndex = index;
+    }
+
+    function nextSlide() {
+        const nextIndex = (currentIndex + 1) % carouselItems.length;
+        showSlide(nextIndex);
+    }
+
+    radioButtons.forEach((radio, index) => {
+        radio.addEventListener("click", () => showSlide(index));
+    });
+
+    // Automatically switch slides every 3 seconds
+    setInterval(nextSlide, 3000);

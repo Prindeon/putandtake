@@ -61,15 +61,18 @@ Sticky navbar at the top
     flex-direction: row;
     justify-content: space-between;
     align-items: center; 
-    background-color: #D4E6FF;
+    background-color: white;
+    z-index: 1;
 }
 .navbar-logo {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 20px;
 }
 .navbar-logo img {
     height: 100%;
@@ -124,6 +127,7 @@ Slide-in nav-menu
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.4s;
+    z-index: 2;
 }
 .overlay.show {
     opacity: 1;
@@ -138,6 +142,7 @@ Slide-in nav-menu
     background-color: white;
     color: white;
     transition: right 0.4s;
+    z-index: 3;
 }
 .mobile-nav.show {
     right: 0;
@@ -227,4 +232,73 @@ Slide-in nav-menu
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+/* ---------------------------------------
+Landing page image carousel
+------------------------------------------ */
+.landing-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    z-index: 0;
+}
+.landing-carousel-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.landing-carousel-item {
+    min-width: 100%;
+    position: relative
+}
+
+.landing-carousel-item img {
+    width: 100%;
+    /* display: block; */
+    max-height: 100%;
+}
+.landing-cta {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.landing-cta a {
+    padding: 16px 48px;
+    background-color: var(--orange);
+    text-decoration: none;
+    color: white;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    
+}
+
+
+.carousel-radio-buttons {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.carousel-radio-buttons input[type="radio"] {
+    display: none;
+}
+
+.carousel-radio-buttons input[type="radio"] + label {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.carousel-radio-buttons input[type="radio"]:checked + label {
+    background-color: var(--orange);
 }
