@@ -34,7 +34,6 @@ h2 {
 .orange {
     color: var(--orange);
 }
-
 .blue {
     color: var(--dark-blue);
 }
@@ -284,19 +283,20 @@ Landing page image carousel
 }
 
 
-.carousel-radio-buttons {
+.landing-carousel-radio-buttons {
     position: absolute;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
+    gap: 10px;
 }
 
-.carousel-radio-buttons input[type="radio"] {
+.landing-carousel-radio-buttons input[type="radio"] {
     display: none;
 }
 
-.carousel-radio-buttons input[type="radio"] + label {
+.landing-carousel-radio-buttons input[type="radio"] + label {
     width: 10px;
     height: 10px;
     background-color: #ccc;
@@ -305,6 +305,6 @@ Landing page image carousel
     display: inline-block;
 }
 
-.carousel-radio-buttons input[type="radio"]:checked + label {
+.landing-carousel-radio-buttons input[type="radio"]:checked + label {
     background-color: var(--orange);
 }

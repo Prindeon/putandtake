@@ -56,34 +56,27 @@ brandLogo.forEach(logo => {
 
 
 
+const landingCarouselContent = document.querySelector('.landing-carousel-content')
+const landingCarouselItems = document.querySelectorAll('.landing-carousel-item')
+const landingCarouselRadioBtns = document.querySelectorAll('.landing-carousel-radio-buttons')
+let currentIndex = 0
+
+function showSlide(index) {
+    const offset = -index * 100
+    landingCarouselContent.style.transform = `translateX(${offset}%)`
+    landingCarouselRadioBtns[index].checked = true
+    currentIndex = index
+}
+
+function nextSlide() {
+    const nextIndex = (currentIndex + 1) % landingCarouselItems.length
+    showSlide(nextIndex)
+}
+
+landingCarouselRadioBtns.forEach((radio, index) => {
+    radio.addEventListener("click", () => showSlide(index))
+})
+
+setInterval(nextSlide, 3000)
 
 
-
-
-
-
-// script.js
-
-
-    const carouselItems = document.querySelectorAll(".carousel-item");
-    const radioButtons = document.querySelectorAll(".carousel-radio-buttons input[type='radio']");
-    let currentIndex = 0;
-
-    function showSlide(index) {
-        const offset = -index * 100;
-        document.querySelector(".carousel-inner").style.transform = `translateX(${offset}%)`;
-        radioButtons[index].checked = true;
-        currentIndex = index;
-    }
-
-    function nextSlide() {
-        const nextIndex = (currentIndex + 1) % carouselItems.length;
-        showSlide(nextIndex);
-    }
-
-    radioButtons.forEach((radio, index) => {
-        radio.addEventListener("click", () => showSlide(index));
-    });
-
-    // Automatically switch slides every 3 seconds
-    setInterval(nextSlide, 3000);
