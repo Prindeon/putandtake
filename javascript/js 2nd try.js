@@ -1,3 +1,4 @@
+
 //--------------|
 // the carousel |
 //--------------|
@@ -67,3 +68,29 @@ for (i = 0; i < circles7.length; i++) {
   circles6[slidePosition-1].className += " enable";
   circles7[slidePosition-1].className += " enable";
 } 
+
+
+
+//----------------|
+// read more lakes|
+//----------------|
+
+
+function readmore() {
+var readmore = document.getElementsByClassName("readmore")
+var gone = document.getElementById ("disappear")
+var text = document.getElementById ("appear")
+var hide = document.getElementById ("less")
+var btnText = document.getElementById("myBtn");
+
+  if (text.style.display === "none") {
+    gone.style.display = "block";
+    text.style.display = "none";
+    btnText.innerHTML = "Read more";
+  } else {
+    gone.style.display = "none";
+    text.style.display = "block";
+    readmore.style.display = "none";
+    btnText.innerHTML = "Read less";
+  }
+}
