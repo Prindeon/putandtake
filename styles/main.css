@@ -463,5 +463,23 @@ Under the fold - landing page
     justify-content: center;
     align-items: center;
     border-radius: 12px;
-    padding: 5vw
+    padding: 5vw;
+    margin-bottom: 2vh;
+}
+.submit-button2 {
+    height: 56px;
+    width: 70vw;
+    background-color: var(--orange);
+    text-decoration: none;
+    color: white;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;  
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 12px;
 }
