@@ -67,7 +67,7 @@ Sticky navbar at the top
     justify-content: space-between;
     align-items: center; 
     background-color: white;
-    z-index: 1;
+    z-index: 696920;
 }
 .navbar-logo {
     height: 100%;
@@ -147,7 +147,7 @@ Slide-in nav-menu
     background-color: white;
     color: white;
     transition: right 0.4s;
-    z-index: 696969;
+    z-index: 696969420;
 }
 .mobile-nav.show {
     right: 0;
