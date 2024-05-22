@@ -252,7 +252,7 @@ background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(146, 146, 146, 0.3)), 
   flex: 1;
 }
 
-#appear, .less {
+#appear, .readless {
  display: none;
 }
 

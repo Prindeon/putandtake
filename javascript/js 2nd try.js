@@ -76,21 +76,65 @@ for (i = 0; i < circles7.length; i++) {
 //----------------|
 
 
-function readmore() {
-var readmore = document.getElementsByClassName("readmore")
-var gone = document.getElementById ("disappear")
-var text = document.getElementById ("appear")
-var hide = document.getElementById ("less")
+// function readmore() {
+// var readmore = document.getElementsByClassName("readmore")
+// var gone = document.getElementById ("disappear")
+// var text = document.getElementById ("appear")
+// var hide = document.getElementsByClassName ("readless")
 
-  if (text.style.display === "none" || text.style.display === "") {
-    gone.style.display = "none";
-    text.style.display = "inline";
-    readmore.textContent = "SHOW LESS";
-  } else {
-    gone.style.display = "inline";
-    text.style.display = "none";
-    readmore.textContent = "READ MORE";
-  }
+//   if (text.style.display === "none") {
+//     gone.style.display = "none";
+//     text.style.display = "inline";
+//     hide.style.display = "inline";
+//     readmore.style.display = "none"
+//   } else {
+//     gone.style.display = "inline";
+//     text.style.display = "none";
+//     hide.style.display = "none";
+//     readmore.style.display = "inline"
+//   }
+// }
+
+// function readless() {
+//   var readmore = document.getElementsByClassName("readmore")
+//   var gone = document.getElementById ("disappear")
+//   var text = document.getElementById ("appear")
+//   var hide = document.getElementsByClassName ("readless")
+  
+//     if (gone.style.display === "none") {
+//       gone.style.display = "inline";
+//       text.style.display = "none";
+//       hide.style.display = "none";
+//       readmore.style.display = "inline"
+//     } else {
+//       text.style.display = "inline";
+//       gone.style.display = "none";
+//       hide.style.display = "inline";
+//       readmore.style.display = "none"
+//     }
+//   }
+
+
+function readmore() {
+  var gone = document.getElementById("disappear");
+  var text = document.getElementById("appear");
+  var show = document.getElementsByClassName("readmore")
+  var hide = document.getElementsByClassName("readless")[0]; // Select the first element with class "readless"
+
+  gone.style.display = "none";
+  text.style.display = "inline";
+  hide.style.display = "block";
+  show.style.display = "none";
 }
 
+function readless() {
+  var gone = document.getElementById("disappear");
+  var text = document.getElementById("appear");
+  var hide = document.getElementsByClassName("readless")
+  var show = document.getElementsByClassName("readmore")[0]; // Select the first element with class "readmore"
 
+  gone.style.display = "inline";
+  text.style.display = "none";
+  show.style.display = "block";
+  hide.style.display = "none";
+}
