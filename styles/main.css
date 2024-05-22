@@ -37,6 +37,9 @@ h2 {
 .blue {
     color: var(--dark-blue);
 }
+.white {
+    color: white;
+}
 
 /* ensures logo size never exceeds the container */
 .logo-img {
