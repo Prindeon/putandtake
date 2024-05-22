@@ -454,3 +454,14 @@ Under the fold - landing page
 .submit-button:hover {
     background-color: var(--hover-orange)
 }
+
+.landing-newsletter2 {
+    background-color: white;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    padding: 5vw
+}
