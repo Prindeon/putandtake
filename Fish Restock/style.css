@@ -1,0 +1,63 @@
+.news {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 56px;
+}
+
+.news .card {
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: #fff;
+    height: 152px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #dbdbdb;
+    border-radius: 6px;
+}
+
+.news .card h1 {
+    display: flex;
+    width: 132px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3px;
+    font-family: "Work Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.news .new-logo {
+    float: right;
+    margin-top: 20px;
+    background-color: #ff6852;
+    color: #fff;
+    padding: 5px 5px;
+    border-radius: 6px;
+    font-family: "Work Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.news .card .date {
+    font-family: "Work Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.news .card .pic {
+    background: url(Rectangle\ 3.png) lightgray 0.974px -84.468px / 100% 172.697% no-repeat;
+    width: 350px;
+    height: 152px;
+    flex-shrink: 0;
+}
+
