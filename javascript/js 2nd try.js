@@ -81,16 +81,16 @@ var readmore = document.getElementsByClassName("readmore")
 var gone = document.getElementById ("disappear")
 var text = document.getElementById ("appear")
 var hide = document.getElementById ("less")
-var btnText = document.getElementById("myBtn");
 
-  if (text.style.display === "none") {
-    gone.style.display = "block";
-    text.style.display = "none";
-    btnText.innerHTML = "Read more";
-  } else {
+  if (text.style.display === "none" || text.style.display === "") {
     gone.style.display = "none";
-    text.style.display = "block";
-    readmore.style.display = "none";
-    btnText.innerHTML = "Read less";
+    text.style.display = "inline";
+    readmore.textContent = "SHOW LESS";
+  } else {
+    gone.style.display = "inline";
+    text.style.display = "none";
+    readmore.textContent = "READ MORE";
   }
 }
+
+
