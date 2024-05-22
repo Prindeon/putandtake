@@ -24,9 +24,15 @@ body {
 }
 h1 {
     font-size: 32px;
+    font-weight: 500;
+}
+h2 {
+    font-size: 32px;
+    font-weight: 500;
+    font-style: italic;
 }
 
-h2 {
+h3 {
     font-size: 20px;
     font-weight: 500;
     line-height: 117.189%; /* 23.438px */
@@ -359,3 +365,26 @@ scrolling fish announcement
     height: 24px;
 }
 
+
+/* ---------------------------------------
+Under the fold - landing page
+------------------------------------------ */
+.about-us {
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.button-orange-outline {
+    padding: 16px 48px;
+    background-color: white;
+    text-decoration: none;
+    color: var(--orange);
+    border-radius: 12px;
+    border: 2px solid var(--orange);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;  
+    text-align: center;
+    margin-top: 56px;
+    align-self: center;
+}

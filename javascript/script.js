@@ -78,4 +78,3 @@ landingCarouselRadioBtns.forEach((radio, index) => {
 })
 
 setInterval(nextSlide, 3000)
-
