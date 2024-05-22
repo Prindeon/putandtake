@@ -6,7 +6,8 @@ global styling
 :root {
     --orange: #FF6852;
     --light-blue: #D4E6FF;
-    --dark-blue: #2C3E50;
+    --dark-blue: rgba(44, 62, 80, 1);
+    --dark-blue-50: rgba(44, 62, 80, 0.5);
 }
 body {
     margin: 0;
@@ -258,19 +259,23 @@ Landing page image carousel
     min-width: 100%;
     position: relative
 }
-
+/* object-fit: cover with 80vh makes sure the images retain the same height and aspect ratio at all times */
 .landing-carousel-item img {
     width: 100%;
-    /* display: block; */
-    max-height: 100%;
+    height: 80vh;
+    object-fit: cover;
 }
-.landing-cta {
+.landing-ctas {
     position: absolute;
-    bottom: 100px;
+    bottom: 64px;
     left: 50%;
     transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 204px;
 }
-.landing-cta a {
+.primary-button{
     padding: 16px 48px;
     background-color: var(--orange);
     text-decoration: none;
@@ -278,8 +283,20 @@ Landing page image carousel
     border-radius: 12px;
     font-size: 20px;
     font-weight: 700;
-    letter-spacing: 1px;
-    
+    letter-spacing: 1px;  
+    text-align: center;
+}
+.secondary-button {
+    padding: 16px 48px;
+    background-color: var(--dark-blue-50);
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;  
+    text-align: center;
 }
 
 
@@ -287,24 +304,4 @@ Landing page image carousel
     position: absolute;
     bottom: 10px;
     left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-}
-
-.landing-carousel-radio-buttons input[type="radio"] {
-    display: none;
-}
-
-.landing-carousel-radio-buttons input[type="radio"] + label {
-    width: 10px;
-    height: 10px;
-    background-color: #ccc;
-    border-radius: 50%;
-    cursor: pointer;
-    display: inline-block;
-}
-
-.landing-carousel-radio-buttons input[type="radio"]:checked + label {
-    background-color: var(--orange);
-}
+    trans

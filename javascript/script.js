@@ -58,7 +58,7 @@ brandLogo.forEach(logo => {
 
 const landingCarouselContent = document.querySelector('.landing-carousel-content')
 const landingCarouselItems = document.querySelectorAll('.landing-carousel-item')
-const landingCarouselRadioBtns = document.querySelectorAll('.landing-carousel-radio-buttons')
+const landingCarouselRadioBtns = document.querySelectorAll('.landing-carousel-radio-buttons input[type="radio"]')
 let currentIndex = 0
 
 function showSlide(index) {
@@ -78,5 +78,4 @@ landingCarouselRadioBtns.forEach((radio, index) => {
 })
 
 setInterval(nextSlide, 3000)
-
 
