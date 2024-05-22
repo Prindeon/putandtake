@@ -38,9 +38,6 @@ h2 {
 .blue {
     color: var(--dark-blue);
 }
-.white {
-    color: white;
-}
 
 /* ensures logo size never exceeds the container */
 .logo-img {
@@ -71,7 +68,7 @@ Sticky navbar at the top
     justify-content: space-between;
     align-items: center; 
     background-color: white;
-    z-index: 696920;
+    z-index: 1;
 }
 .navbar-logo {
     height: 100%;
@@ -151,7 +148,7 @@ Slide-in nav-menu
     background-color: white;
     color: white;
     transition: right 0.4s;
-    z-index: 696969420;
+    z-index: 696969;
 }
 .mobile-nav.show {
     right: 0;
@@ -307,4 +304,60 @@ Landing page image carousel
     position: absolute;
     bottom: 10px;
     left: 50%;
-    trans
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.landing-carousel-radio-buttons input[type="radio"] {
+    display: none;
+}
+
+.landing-carousel-radio-buttons input[type="radio"] + label {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.landing-carousel-radio-buttons input[type="radio"]:checked + label {
+    background-color: var(--orange);
+}
+
+/* ---------------------------------------
+scrolling fish announcement
+------------------------------------------ */
+.fish-announcement-container {
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 48px;
+    background-color: var(--dark-blue-50);
+    overflow: hidden;
+    text-decoration: none;
+    white-space: nowrap;
+    display: flex;
+}
+.scrolling-announcement-text {
+    display: flex;
+    align-items: center;
+    animation: scroll-left 5s linear infinite;
+    color: white;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0)
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.scrolling-announcement-text img {
+    height: 24px;
+}
+
