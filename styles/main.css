@@ -5,6 +5,7 @@ global styling
 ------------------------------------------ */
 :root {
     --orange: #FF6852;
+    --hover-orange: #da5945;
     --light-blue: #D4E6FF;
     --dark-blue: rgba(44, 62, 80, 1);
     --dark-blue-50: rgba(44, 62, 80, 0.5);
@@ -58,6 +59,35 @@ h3 {
     height: 62px;
     display: flex;
     align-items: center;
+}
+.primary-button{
+    padding: 16px 48px;
+    background-color: var(--orange);
+    text-decoration: none;
+    color: white;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;  
+    text-align: center;
+}
+.primary-button:hover {
+    background-color: var(--hover-orange);
+}
+.secondary-button {
+    padding: 16px 48px;
+    background-color: var(--dark-blue-50);
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;  
+    text-align: center;
+}
+.secondary-button:hover {
+    background-color: rgba(44, 62, 80, 0.7);
 }
 
 /* ---------------------------------------
@@ -281,31 +311,6 @@ Landing page image carousel
     gap: 16px;
     min-width: 204px;
 }
-.primary-button{
-    padding: 16px 48px;
-    background-color: var(--orange);
-    text-decoration: none;
-    color: white;
-    border-radius: 12px;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 1px;  
-    text-align: center;
-}
-.secondary-button {
-    padding: 16px 48px;
-    background-color: var(--dark-blue-50);
-    text-decoration: none;
-    color: white;
-    border: 1px solid white;
-    border-radius: 12px;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 1px;  
-    text-align: center;
-}
-
-
 .landing-carousel-radio-buttons {
     position: absolute;
     bottom: 10px;
@@ -365,10 +370,10 @@ scrolling fish announcement
     height: 24px;
 }
 
-
 /* ---------------------------------------
 Under the fold - landing page
 ------------------------------------------ */
+/* About us section */
 .about-us {
     margin: 40px;
     display: flex;
@@ -387,4 +392,59 @@ Under the fold - landing page
     text-align: center;
     margin-top: 56px;
     align-self: center;
+}
+.button-orange-outline:hover {
+    background-color: rgb(245, 245, 245);
+}
+
+/* newsletter section */
+.landing-newsletter {
+    background-color: var(--dark-blue);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 32px 0;
+}
+.landing-newsletter h3 {
+    font-weight: 700;
+    margin: 0;
+}
+.landing-newsletter p {
+    margin: 8px 0 34px 0;
+}
+.email-input {
+    padding: 0 12px;
+    height: 56px;
+    max-width: 300px;
+    width: 100%;
+    box-sizing: border-box; /* this ensures the width is including border */
+    border-radius: 12px;
+    border: 2px solid #C5D4E2;
+    background-color: #EDF2F6; 
+    align-self: center;
+}
+.email-input::placeholder {
+    color: hsl(0, 0%, 50%);
+}
+.submit-button {
+    height: 56px;
+    min-width: 300px;
+    background-color: var(--orange);
+    text-decoration: none;
+    color: white;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;  
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 12px;
+}
+.submit-button:hover {
+    background-color: var(--hover-orange)
 }
