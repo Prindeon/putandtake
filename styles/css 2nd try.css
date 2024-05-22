@@ -11,8 +11,9 @@ main {
 }
 
 p {
-    font-weight: normal;
+    font-weight: 300;
     font-size: 16px;
+    margin: 0%;
 }
 #italic {
   font-style: italic;
@@ -155,8 +156,8 @@ p {
 }
 
 .fishimg2 {
-  max-width: 35vw;
-    height: fit-content;
+  max-width: 40%;
+    height: 100%;
     border-radius: 12px;
     margin-right: 3vw;
 }
@@ -171,6 +172,7 @@ p {
 
 #readmore {
     color: #FF6852;
+    font-weight: 500;
 }
 
 a {
@@ -199,6 +201,7 @@ background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(146, 146, 146, 0.3)), 
   background-color: #2C3E50;
   color: white;
   min-height: 100px;
+  margin-bottom: 2em;
   height:20vh;
   padding: 5vw;
   background-position: center; 
@@ -214,6 +217,7 @@ background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(146, 146, 146, 0.3)), 
     background-color: #2C3E50;
     color: white;
     min-height: 100px;
+    margin-bottom: 2em;
     height:20vh;
     padding: 5vw;
     background-position: center; 
@@ -226,8 +230,20 @@ background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(146, 146, 146, 0.3)), 
 
 .fname {
   margin-top: 0%;
+  margin-bottom: 0.5em;
 }
 
 .desc {
   margin-bottom: 5vh;
+}
+
+#fishtext {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#fishabout {
+  flex: 1;
 }
