@@ -41,7 +41,7 @@ p {
 }
 
 #fishimg {
-    width: 100%;
+    width: 90%;
     border-radius: 12px;
     position: relative;
     margin-left: -2vw;
@@ -190,4 +190,5 @@ h5 {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 1px;
+  margin-top: 5vw;
 }
