@@ -10,6 +10,11 @@ global styling
     --dark-blue: rgba(44, 62, 80, 1);
     --dark-blue-50: rgba(44, 62, 80, 0.5);
 }
+
+footer {
+    background-color: var(--light-blue);
+}
+
 body {
     margin: 0;
     padding: 0;
