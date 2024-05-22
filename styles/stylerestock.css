@@ -1,40 +1,29 @@
+
+
 .news {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 56px;
+    justify-content: center;
+    justify-content: center;
+    gap: 1.5vh;
+    width: 80vw;
+    margin-top: 3vh;
 }
 
-.news .card {
+.card {
     padding-bottom: 2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
     background-color: #fff;
-    height: 152px;
-    width: 350px;
+    height: auto;
+    width: 80vw;
     display: flex;
     flex-direction: column;
     border: 1px solid #dbdbdb;
     border-radius: 6px;
 }
 
-.news .card h1 {
-    display: flex;
-    width: 132px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 3px;
-    font-family: "Work Sans";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-
-.news .new-logo {
+.new-logo {
     float: right;
-    margin-top: 20px;
     background-color: #ff6852;
     color: #fff;
     padding: 5px 5px;
@@ -46,7 +35,7 @@
     line-height: normal;
 }
 
-.news .card .date {
+.date {
     font-family: "Work Sans";
     font-size: 14px;
     font-style: normal;
@@ -54,10 +43,16 @@
     line-height: normal;
 }
 
-.news .card .pic {
+.pic {
     background: url(Rectangle\ 3.png) lightgray 0.974px -84.468px / 100% 172.697% no-repeat;
-    width: 350px;
-    height: 152px;
+    width: 100%;
+    height: 40%;
     flex-shrink: 0;
+    margin-top: 0%;
+    padding: 3vw;
+}
+
+.lakes {
+    padding-left: 3vw;
 }
 

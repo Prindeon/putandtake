@@ -255,3 +255,7 @@ background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(146, 146, 146, 0.3)), 
 #appear, .less {
  display: none;
 }
+
+.white {
+  color: white;
+}
