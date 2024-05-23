@@ -1,4 +1,5 @@
 
+
 //-------------------------------------------------------------------|
 // side-navbar menu opening and closing when clicking hamburger menu |
 //-------------------------------------------------------------------|
@@ -129,31 +130,63 @@ reviewRadioBtns.forEach((radio, review) => {
         showReviewCard(review)
     })
 })
-document.querySelector('.review-arrow-forward').addEventListener('click', () => nextReviewCard())
-document.querySelector('.review-arrow-back').addEventListener('click', () => previousReviewCard())
+const reviewArrowForward = document.querySelector('.review-arrow-forward');
+if (reviewArrowForward) {
+    reviewArrowForward.addEventListener('click', () => {
+        console.log('Review arrow forward clicked');
+        nextReviewCard();
+    });
+} else {
+    console.log('Review arrow forward not found');
+}
 
+// Review arrow back logic
+const reviewArrowBack = document.querySelector('.review-arrow-back');
+if (reviewArrowBack) {
+    reviewArrowBack.addEventListener('click', () => {
+        console.log('Review arrow back clicked');
+        previousReviewCard();
+    });
+} else {
+    console.log('Review arrow back not found');
+}
 //-------------------|
 // currency switcher |
 //-------------------|
-document.addEventListener('DOMContentLoaded', () => {
-    const toggleButton = document.getElementById('currencyToggleButton');
+const toggleButton = document.getElementById('currencyToggleButton');
 
-    if (toggleButton) {
-        console.log('Button found:', toggleButton);
-
-        toggleButton.addEventListener('click', () => {
-            console.log('Button clicked!');
-            console.log('Current text:', toggleButton.textContent);
-
-            if (toggleButton.textContent === "DKK") {
-                toggleButton.textContent = "EUR";
-                console.log('Text changed to EUR');
-            } else {
-                toggleButton.textContent = "DKK";
-                console.log('Text changed to DKK');
-            }
+toggleButton.addEventListener('click', () => {
+    const prices = document.querySelectorAll('.price');
+    if (toggleButton.textContent === "Switch to €") {
+        toggleButton.textContent = "Switch to DKK";
+        prices.forEach(price => {
+            price.textContent = `€ ${price.getAttribute('data-eur')}`;
         });
     } else {
-        console.log('Button not found');
+        toggleButton.textContent = "Switch to €";
+        prices.forEach(price => {
+            price.textContent = `DKK ${price.getAttribute('data-dkk')}`;
+        });
     }
 });
+
+
+
+function showPrices(tab) {
+    var tabs = document.querySelectorAll('.tab')
+    var tables = document.querySelectorAll('.pricing-table')
+
+    // Removes 'active' class from all tabs and hide all tables
+    tabs.forEach(function(tab) {
+        tab.classList.remove('active')
+    });
+
+    tables.forEach(function(table) {
+        table.classList.add('hidden')
+    });
+
+    // Adds 'active' class to clicked tab and shows corresponding table
+    document.querySelector('.tab[onclick="showPrices(\'' + tab + '\')"]').classList.add('active')
+    document.getElementById(tab).classList.remove('hidden')
+}
+

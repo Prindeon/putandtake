@@ -601,6 +601,11 @@ h3 {
 /* ---------------------------------------
     Prices page
 ------------------------------------------ */
+.title-and-currency {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 40px;
+}
 /* Currency toggle switch */
 .currency-toggle-container {
     display: flex;
@@ -608,11 +613,90 @@ h3 {
     align-items: center;
 }
 .currency-toggle-button {
-
-    padding: 16px;
+    min-width: 154px;
+    padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
-    border: 1px solid var(--orange);
-    border-radius: 6px;
+    border-radius: 5px;
+    background-color: var(--orange);
+    font-weight: 600;
+    font-family: "Work Sans";
+    border: none;
+    color: #fff;
+}
+
+
+.pricing-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin: 12px 40px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--orange);
+    color: #fff;
+}
+
+.tab {
+    flex: 1;
+    padding: 12px 0;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: inherit;
+    outline: none;
+    font-weight: 600;  
+}
+
+.tab.active {
     background-color: white;
+    color: var(--orange);
+}
+
+/* .pricing-table {
+
+} */
+
+.pricing-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pricing-table th, .pricing-table td {
+    padding: 10px 0 10px 40px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.pricing-table td.price {
+    width: 100px;  /* Set a fixed width for the price column */
+}
+.pricing-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.note {
+    margin-top: 20px;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.note a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.note a:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
 }
