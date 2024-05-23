@@ -44,6 +44,11 @@ h3 {
     font-weight: 500;
     line-height: 117.189%; /* 23.438px */
 }
+
+#readmore {
+    color: #FF6852;
+    font-weight: 500;
+}
 /* addon class for colorful text */
 .orange {
     color: var(--orange);
