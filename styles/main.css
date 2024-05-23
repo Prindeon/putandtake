@@ -374,7 +374,7 @@ scrolling fish announcement
         transform: translateX(0)
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-114%);
     }
 }
 .scrolling-announcement-text img {
