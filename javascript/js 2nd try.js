@@ -19,12 +19,6 @@ function currentSlide(n) {
   SlideShow(slidePosition = n);
 }
 
-$(document).ready(function () {
-  if(window.location.hash){
-     var slideNumber = window.location.hash.substr(1);
-     $('#slider div:nth-child('+slideNumber+')').trigger('tap');
-  }
-});
 
 //------------------------------------------------|
 // dots under images and visibility of containers |
@@ -82,45 +76,6 @@ for (i = 0; i < circles7.length; i++) {
 //----------------|
 
 
-// function readmore() {
-// var readmore = document.getElementsByClassName("readmore")
-// var gone = document.getElementById ("disappear")
-// var text = document.getElementById ("appear")
-// var hide = document.getElementsByClassName ("readless")
-
-//   if (text.style.display === "none") {
-//     gone.style.display = "none";
-//     text.style.display = "inline";
-//     hide.style.display = "inline";
-//     readmore.style.display = "none"
-//   } else {
-//     gone.style.display = "inline";
-//     text.style.display = "none";
-//     hide.style.display = "none";
-//     readmore.style.display = "inline"
-//   }
-// }
-
-// function readless() {
-//   var readmore = document.getElementsByClassName("readmore")
-//   var gone = document.getElementById ("disappear")
-//   var text = document.getElementById ("appear")
-//   var hide = document.getElementsByClassName ("readless")
-  
-//     if (gone.style.display === "none") {
-//       gone.style.display = "inline";
-//       text.style.display = "none";
-//       hide.style.display = "none";
-//       readmore.style.display = "inline"
-//     } else {
-//       text.style.display = "inline";
-//       gone.style.display = "none";
-//       hide.style.display = "inline";
-//       readmore.style.display = "none"
-//     }
-//   }
-
-
 function readmore() {
   var gone = document.getElementById("disappear");
   var text = document.getElementById("appear");
@@ -144,3 +99,44 @@ function readless() {
   show.style.display = "block";
   hide.style.display = "none";
 }
+
+
+
+function getSlide(){
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get('slide');
+}
+
+function showSlide(slideNumber){
+  // Selecting the fishbox based on the slide number
+  const item = document.querySelectorAll('.Containers');
+  
+  // Adjusting the slide number to match the array index (0-based)
+  const adjustedSlideNumber = slideNumber - 1;
+  
+  // Checking if the slide number is within the valid range
+  if (adjustedSlideNumber >= 0 && adjustedSlideNumber < item.length) {
+    // Scroll to the fishbox corresponding to the slide number
+    item[adjustedSlideNumber].scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', ()=>{
+  const slideNumber = getSlide();
+  if (slideNumber){
+    showSlide(parseInt(slideNumber)); // Parsing slideNumber as an integer
+  }
+});
+
+// function showSlide(slideNumber){
+//   const carousel = document.getElementsByClassName('slideshow-container fade');
+//   const items = carousel.getElementsByClassName('Containers');
+//   items[slideNumber - 1].scrollIntoView();
+// }
+
+// document.addEventListener('DOMContentLoaded', ()=>{
+//   const slideNumber = getSlideFromUrl();
+//   if (slideNumber){
+//     showSlide(slideNumber);
+//   }
+// })
