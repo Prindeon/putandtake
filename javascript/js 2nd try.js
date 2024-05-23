@@ -18,6 +18,32 @@ function currentSlide(n) {
   SlideShow(slidePosition = n);
 }
 
+// Get the href attribute of the link
+var href = window.location.href;
+
+
+var parts = href.split('#');
+
+//Check if the URL contains a fragment identifier
+if (parts.length > 1) {
+    var fragment = parts[1];
+
+    var slideNumber = parseInt(fragment);
+
+
+    if (!isNaN(slideNumber)) {
+
+        console.log(slideNumber);
+    } else {
+        console.log("Invalid slide number.");
+    }
+} else {
+    console.log("No fragment identifier found in the URL.");
+
+  
+}
+
+
 //------------------------------------------------|
 // dots under images and visibility of containers |
 //------------------------------------------------|
@@ -77,7 +103,7 @@ function readmore() {
   var gone = document.getElementById("disappear");
   var text = document.getElementById("appear");
   var show = document.getElementsByClassName("readmore")
-  var hide = document.getElementsByClassName("readless")[0]; // Select the first element with class "readless"
+  var hide = document.getElementsByClassName("readless"); // Select the first element with class "readless"
 
   gone.style.display = "none";
   text.style.display = "inline";
@@ -89,7 +115,7 @@ function readless() {
   var gone = document.getElementById("disappear");
   var text = document.getElementById("appear");
   var hide = document.getElementsByClassName("readless")
-  var show = document.getElementsByClassName("readmore")[0]; // Select the first element with class "readmore"
+  var show = document.getElementsByClassName("readmore"); // Select the first element with class "readmore"
 
   gone.style.display = "inline";
   text.style.display = "none";
