@@ -2,19 +2,12 @@
 //----------------|
 // read more lakes|
 //----------------|
-const threeDots = document.getElementById("dots");
+const threeDots = document.getElementById("dotz");
 const text = document.getElementById("appear");
 const readMoreBtn = document.getElementById("read-more");
 
 readMoreBtn.addEventListener('click', () => {
-  threeDots.classList.toggle('show'); // makes 3 dots "..." disappear
-  text.classList.toggle('show'); // makes the hidden 'extra' text visible
 
-  if (readMoreBtn.textContent === "READ MORE") {
-    readMoreBtn.textContent = "READ LESS";
-  } else {
-    readMoreBtn.textContent = "READ MORE";
-  }
 });
 
 
