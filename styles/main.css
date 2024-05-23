@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* ---------------------------------------
-global styling 
+    Global styling 
 ------------------------------------------ */
 :root {
     --orange: #FF6852;
@@ -38,7 +38,6 @@ h2 {
     font-weight: 500;
     font-style: italic;
 }
-
 h3 {
     font-size: 20px;
     font-weight: 500;
@@ -102,7 +101,7 @@ h3 {
 }
 
 /* ---------------------------------------
-Sticky navbar at the top 
+    Sticky navbar at the top 
 ------------------------------------------ */
 .navbar {
     position: sticky;
@@ -115,7 +114,7 @@ Sticky navbar at the top
     justify-content: space-between;
     align-items: center; 
     background-color: white;
-    z-index: 1;
+    z-index: 21;
 }
 .navbar-logo {
     height: 100%;
@@ -167,7 +166,7 @@ Sticky navbar at the top
 }
 
 /* ---------------------------------------
-Slide-in nav-menu
+    Slide-in nav-menu
 ------------------------------------------ */
 /* This adds the dark background overlay, which is also clickable, refer to script.js */
 .overlay {
@@ -282,21 +281,17 @@ Slide-in nav-menu
 }
 .mobile-nav .small-logo {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
 }
 
 /* ---------------------------------------
-Landing page image carousel
+    Landing page image carousel
 ------------------------------------------ */
 .landing-carousel {
     position: relative;
-    width: 100%;
-    max-width: 800px;
-    margin: auto;
     overflow: hidden;
-    z-index: 0;
 }
 .landing-carousel-content {
     display: flex;
@@ -347,9 +342,29 @@ Landing page image carousel
 .landing-carousel-radio-buttons input[type="radio"]:checked + label {
     background-color: var(--orange);
 }
+.landing-text-container-1 {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 100vw;
+    gap: 8px;
+}
+.landing-text-container-1 h1 {
+    width: 80%;
+    margin: 0;
+}
+.landing-text-container-1 p {
+    width: 100%;
+    margin: 0;
+}
 
 /* ---------------------------------------
-scrolling fish announcement
+    Scrolling fish announcement
 ------------------------------------------ */
 .fish-announcement-container {
     z-index: 20;
@@ -382,7 +397,7 @@ scrolling fish announcement
 }
 
 /* ---------------------------------------
-About us section
+    About us section
 ------------------------------------------ */
 .about-us {
     margin: 40px;
@@ -408,7 +423,7 @@ About us section
 }
 
 /* ---------------------------------------
-Newsletter section
+    Newsletter section
 ------------------------------------------ */
 .landing-newsletter {
     background-color: var(--dark-blue);
@@ -427,7 +442,7 @@ Newsletter section
     margin: 8px 0 34px 0;
 }
 .email-input {
-    padding: 0 12px;
+    padding: 0 16px;
     height: 56px;
     max-width: 300px;
     width: 100%;
@@ -436,6 +451,7 @@ Newsletter section
     border: 2px solid #C5D4E2;
     background-color: #EDF2F6; 
     align-self: center;
+    font-size: 14px;
 }
 .email-input::placeholder {
     color: hsl(0, 0%, 50%);
@@ -452,7 +468,7 @@ Newsletter section
     letter-spacing: 1px;  
     text-align: center;
     border: none;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 12px;
@@ -462,37 +478,93 @@ Newsletter section
 }
 
 /* ---------------------------------------
-Reviews section
+    Testimonials section
 ------------------------------------------ */
 .testimonials-section {
+    position: relative;
     display: flex;
     flex-direction: column;
-    margin: 0 40px;
+    padding: 60px 0px;
+    overflow: hidden;
 }
 .review-card-container {
-    margin-left: auto;
-    margin-right: auto;
-}
-.review-card {
     display: flex;
+    transition: transform 0.5s ease-in-out;
+
+    width: 100%;
+}
+/* this container is just invisible on top. Ignore it, but it's VITAL that it's here */
+.review-card {
+    min-width: 100%;
+}
+.review-card-content {
+    display: flex;
+    background-color: white;
     flex-direction: column;
     align-items: center;
     height: 300px;
     border-radius: 12px;
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.25);
     padding: 20px 32px 60px 32px;
+    margin: 5px 30px;
 }
 .review-card h3 {
     font-size: 20px;
     font-weight: 600;
-    margin: 12px, 0 0 0;
+    margin: 12px 0 8px 0;
+}
+.review-card p {
+    margin: 0px;
 }
 .review-star {
     display: flex;
     align-items: flex-start;
     gap: 10px;
 }
+.review-radio-buttons {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+.review-radio-buttons input[type="radio"] {
+    display: none;
+}
+.review-radio-buttons input[type="radio"] + label {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+}
+.review-radio-buttons input[type="radio"]:checked + label {
+    background-color: var(--orange);
+}
+.review-arrow-back {
+    cursor: pointer;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 52%;
+    left: 25px;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+}
+.review-arrow-forward {
+    cursor: pointer;
+    position: absolute;
+    top: 52%;
+    right: 12px;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+}
 
+
+/* footer newsletter buttons */
 .landing-newsletter2 {
     background-color: white;
     color: rgb(0, 0, 0);

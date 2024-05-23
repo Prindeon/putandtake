@@ -84,55 +84,44 @@
     Hero section image carousel
 ------------------------------------------->
     <main>
-
-        <!------------------------------------------------------------------------------
-
-                i added the fish icon, but the previous ver is commented out below
-
-        -------------------------------------------------------------------------------->
         <div class="landing-carousel">
             <a href="restocking.html" class="fish-announcement-container" style="gap: 10px;">
-                <div class="scrolling-announcement-text" style="display: flex; gap: 10px;">
-                    Vi puttede 300 kg fisk ind for 3 dage siden! 𓆟
-                    
-                </div>
-                <div class="scrolling-announcement-text" style="display: flex; gap: 10px;">
-                    Vi puttede 300 kg fisk ind for 3 dage siden! 𓆟
-                </div>
-                <div class="scrolling-announcement-text" style="display: flex; gap: 10px;">
-                    Vi puttede 300 kg fisk ind for 3 dage siden! 𓆟
-        
-                </div>
-                <div class="scrolling-announcement-text" style="display: flex; gap: 10px;">
-                    Vi puttede 300 kg fisk ind for 3 dage siden! 𓆟
-        
-                </div>
-                
- <!--    <div class="landing-carousel">
-             Scrolling fish announcement 
+        <div class="landing-carousel">
             <a href="restocking.html" class="fish-announcement-container">
                 <div class="scrolling-announcement-text">
-                    -- Vi puttede 300 kg fisk ind for 3 dage siden! -
+                    - Vi puttede 300 kg fisk ind for 3 dage siden! -
                 </div>
                 <div class="scrolling-announcement-text">
-                    -- Vi puttede 300 kg fisk ind for 3 dage siden! -
+                    - Vi puttede 300 kg fisk ind for 3 dage siden! -
                 </div>
                 <div class="scrolling-announcement-text">
-                    -- Vi puttede 300 kg fisk ind for 3 dage siden! -
+                    - Vi puttede 300 kg fisk ind for 3 dage siden! -
                 </div>
                 <div class="scrolling-announcement-text">
-                    -- Vi puttede 300 kg fisk ind for 3 dage siden! -
-                </div>  -->
+                    - Vi puttede 300 kg fisk ind for 3 dage siden! -
+                </div> 
             </a>
             <!-- image carousel -->
             <div class="landing-carousel-content">
+                <!-- first image -->
                 <div class="landing-carousel-item active-img">
                     <img src="images/hd-lake-drone.webp" alt="Drone billede af Nørreris Put and Take">
-                    <div class="landing-ctas">   
+                    <div class="landing-text-container-1">
+                        <h1>
+                            Velkommen til <br>
+                            <span class="bold">Nørreris Put<span class="orange">&</span>Take</span>
+                        </h1>
+                        <p>
+                            Nørreris Put&Take er beliggende i et naturskønt 
+                            område i det smukke Sydhimmerland.
+                        </p>
+                    </div>
+                    <div class="landing-ctas">
                         <a class="primary-button" href="priser.html">Læs mere</a>
                         <a class="secondary-button" href="priser.html">Priser</a>
                     </div> 
                 </div>
+                <!-- second image -->
                 <div class="landing-carousel-item">
                     <img src="images/landing-image-2.jpg" alt="A man is gently transfering a fish into the Put&Take by net">
                     <div class="landing-ctas">   
@@ -140,6 +129,7 @@
                         <a class="primary-button" href="priser.html">Læs mere</a>
                     </div> 
                 </div>
+                <!-- third image -->
                 <div class="landing-carousel-item">
                     <img src="images/landing-page-3.webp" alt="A man is holding a large-looking brook trout up at the camera">
                     <div class="landing-ctas">   
@@ -199,24 +189,115 @@
     <section class="testimonials-section">
         <h2>Hvad vores gæster siger</h2>
         <div class="review-card-container">
-            <div class="review-card">
-                <div class="review-stars">
-                    <img src="images/yellow-star.svg" alt="golden star">
-                    <img src="images/yellow-star.svg" alt="golden star">
-                    <img src="images/yellow-star.svg" alt="golden star">
-                    <img src="images/yellow-star.svg" alt="golden star">
-                    <img src="images/grey-star.svg" alt="grey star">
+            <div class="review-card"> <!-- this container is just invisible on top of the content. Ignore it, but it's VITAL that it's here -->
+                <div class="review-card-content">
+                    <div class="review-stars">
+                        <img src="images/yellow-star.svg" alt="golden star">
+                        <img src="images/yellow-star.svg" alt="golden star">
+                        <img src="images/yellow-star.svg" alt="golden star">
+                        <img src="images/yellow-star.svg" alt="golden star">
+                        <img src="images/grey-star.svg" alt="grey star">
+                    </div>
+                    <h3>Bjarne Kristensen</h3>
+                    <p>
+                        Dejligt fredeligt beliggende sted hvor der var rent og pænt, 
+                        og alle de fornødenheder man skal bruge. Der var masser af fisk i søerne, 
+                        og jeg fangede da også en fin regnbue. Det var bestemt ikke vort sidste besøg der.
+                    </p>
                 </div>
-                <h3>Bjarne Kristensen</h3>
-                <p>
-                    Dejligt fredeligt beliggende sted hvor der var rent og pænt, 
-                    og alle de fornødenheder man skal bruge. Der var masser af fisk i søerne, 
-                    og jeg fangede da også en fin regnbue. Det var bestemt ikke vort sidste besøg der.
-                </p>
+            </div>
+            <div class="review-card">
+                <div class="review-card-content">
+                    <div class="review-stars">
+                        <img src="images/yellow-star.svg" alt="golden star">
+                        <img src="images/yellow-star.svg" alt="golden star">
+                        <img src="images/yellow-star.svg" alt="golden star">
+                        <img src="images/yellow-star.svg" alt="golden star">
+                        <img src="images/grey-star.svg" alt="grey star">
+                    </div>
+                    <h3>Bjarne Kristensen</h3>
+                    <p>
+                        Dejligt fredeligt beliggende sted hvor der var rent og pænt, 
+                        og alle de fornødenheder man skal bruge. Der var masser af fisk i søerne, 
+                        og jeg fangede da også en fin regnbue. Det var bestemt ikke vort sidste besøg der.
+                    </p>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-card-content">
+                    <div class="review-stars">
+                        <img src="images/yellow-star.svg" alt="golden star">
+                        <img src="images/yellow-star.svg" alt="golden star">
+                        <img src="images/yellow-star.svg" alt="golden star">
+                        <img src="images/yellow-star.svg" alt="golden star">
+                        <img src="images/grey-star.svg" alt="grey star">
+                    </div>
+                    <h3>Bjarne Kristensen</h3>
+                    <p>
+                        Dejligt fredeligt beliggende sted hvor der var rent og pænt, 
+                        og alle de fornødenheder man skal bruge. Der var masser af fisk i søerne, 
+                        og jeg fangede da også en fin regnbue. Det var bestemt ikke vort sidste besøg der.
+                    </p>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-card-content">
+                    <div class="review-stars">
+                        <img src="images/yellow-star.svg" alt="golden star">
+                        <img src="images/yellow-star.svg" alt="golden star">
+                        <img src="images/yellow-star.svg" alt="golden star">
+                        <img src="images/yellow-star.svg" alt="golden star">
+                        <img src="images/grey-star.svg" alt="grey star">
+                    </div>
+                    <h3>Bjarne Kristensen</h3>
+                    <p>
+                        Dejligt fredeligt beliggende sted hvor der var rent og pænt, 
+                        og alle de fornødenheder man skal bruge. Der var masser af fisk i søerne, 
+                        og jeg fangede da også en fin regnbue. Det var bestemt ikke vort sidste besøg der.
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="review-arrow-back"></div>
-        <div class="review-arrow-forward"></div>
+        <div class="review-arrow-back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="59" height="59" viewBox="0 0 59 59" fill="none">
+                <g filter="url(#filter0_d_626_7877)">
+                  <circle cx="24" cy="24" r="24" transform="matrix(-1 0 0 1 53.25 3.90845)" fill="white"/>
+                </g>
+                <path d="M23.4792 26.9084C24.0315 26.9084 24.4792 27.3562 24.4792 27.9084C24.4792 28.4607 24.0315 28.9084 23.4792 28.9084L23.4792 26.9084ZM22.4193 28.6156C22.0288 28.225 22.0288 27.5919 22.4193 27.2013L28.7832 20.8374C29.1738 20.4469 29.8069 20.4469 30.1974 20.8374C30.588 21.2279 30.588 21.8611 30.1974 22.2516L24.5406 27.9084L30.1975 33.5653C30.588 33.9558 30.588 34.589 30.1975 34.9795C29.8069 35.37 29.1738 35.37 28.7832 34.9795L22.4193 28.6156ZM23.4792 28.9084L23.1264 28.9084L23.1264 26.9084L23.4792 26.9084L23.4792 28.9084Z" fill="#FF6852"/>
+                <defs>
+                  <filter id="filter0_d_626_7877" x="0.25" y="0.908447" width="58" height="58" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feOffset dy="2"/>
+                    <feGaussianBlur stdDeviation="2.5"/>
+                    <feComposite in2="hardAlpha" operator="out"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_626_7877"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_626_7877" result="shape"/>
+                  </filter>
+                </defs>
+              </svg>
+        </div>
+        <div class="review-arrow-forward">
+            <svg xmlns="http://www.w3.org/2000/svg" width="59" height="59" viewBox="0 0 59 59" fill="none">
+                <g filter="url(#filter0_d_626_7874)">
+                  <circle cx="29.25" cy="27.9084" r="24" fill="white"/>
+                </g>
+                <path d="M35.0208 26.9084C34.4685 26.9084 34.0208 27.3562 34.0208 27.9084C34.0208 28.4607 34.4685 28.9084 35.0208 28.9084L35.0208 26.9084ZM36.0807 28.6156C36.4712 28.225 36.4712 27.5919 36.0807 27.2013L29.7168 20.8374C29.3262 20.4469 28.6931 20.4469 28.3026 20.8374C27.912 21.2279 27.912 21.8611 28.3026 22.2516L33.9594 27.9084L28.3025 33.5653C27.912 33.9558 27.912 34.589 28.3025 34.9795C28.6931 35.37 29.3262 35.37 29.7168 34.9795L36.0807 28.6156ZM35.0208 28.9084L35.3736 28.9084L35.3736 26.9084L35.0208 26.9084L35.0208 28.9084Z" fill="#FF6852"/>
+                <defs>
+                  <filter id="filter0_d_626_7874" x="0.25" y="0.908447" width="58" height="58" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feOffset dy="2"/>
+                    <feGaussianBlur stdDeviation="2.5"/>
+                    <feComposite in2="hardAlpha" operator="out"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_626_7874"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_626_7874" result="shape"/>
+                  </filter>
+                </defs>
+              </svg>
+        </div>
         <div class="review-radio-buttons">
             <input type="radio" name="review-radio" id="review-radio1" checked>
             <label for="review-radio1"></label>
@@ -224,6 +305,8 @@
             <label for="review-radio2"></label>
             <input type="radio" name="review-radio" id="review-radio3" >
             <label for="review-radio3"></label>
+            <input type="radio" name="review-radio" id="review-radio4" >
+            <label for="review-radio4"></label>
         </div>
     </section>
 
@@ -231,7 +314,7 @@
 
 
 <!----------------------------------------------------
-footer                                              ||
+    footer                                          ||
 ----------------------------------------------------->
 <footer>
     <div class="navbar-logo logo">

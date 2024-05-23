@@ -63,11 +63,14 @@ brandLogo.forEach(logo => {
 
 
 
-
+//------------------------------------------------------------------------|
+// Updates index for carousel slides on landing page and moves the slides |
+//------------------------------------------------------------------------|
 const landingCarouselContent = document.querySelector('.landing-carousel-content')
 const landingCarouselItems = document.querySelectorAll('.landing-carousel-item')
 const landingCarouselRadioBtns = document.querySelectorAll('.landing-carousel-radio-buttons input[type="radio"]')
 let currentIndex = 0
+let slideInterval
 
 function showSlide(index) {
     const offset = -index * 100
@@ -81,8 +84,52 @@ function nextSlide() {
     showSlide(nextIndex)
 }
 
+// resets interval for when the radio buttons are clicked
+function resetSlideInterval() {
+    clearInterval(slideInterval)
+    slideInterval = setInterval(nextSlide, 5000)
+}
+
 landingCarouselRadioBtns.forEach((radio, index) => {
-    radio.addEventListener("click", () => showSlide(index))
+    radio.addEventListener("click", () => {
+        showSlide(index)
+        resetSlideInterval()
+    })
 })
 
-setInterval(nextSlide, 3000)
+slideInterval = setInterval(nextSlide, 5000)
+
+//---------------------------------------|
+// review card clickable moving carousel |
+//---------------------------------------|
+const reviewCardContainer = document.querySelector('.review-card-container')
+const reviewCard = document.querySelectorAll('.review-card')
+const reviewRadioBtns = document.querySelectorAll('.review-radio-buttons input[type="radio"]')
+let currentReview = 0
+
+function showReviewCard(review) {
+    const reviewOffset = -review * 100
+    reviewCardContainer.style.transform = `translateX(${reviewOffset}%)`
+    reviewRadioBtns[review].checked = true
+    currentReview = review
+}
+
+function nextReviewCard() {
+    const nextReview = (currentReview + 1) % reviewCard.length
+    showReviewCard(nextReview)
+}
+
+function previousReviewCard() {
+    const nextReview = (currentReview - 1) % reviewCard.length
+    showReviewCard(nextReview)
+}
+
+reviewRadioBtns.forEach((radio, review) => {
+    radio.addEventListener('click', () => {
+        showReviewCard(review)
+    })
+})
+
+document.querySelector('.review-arrow-forward').addEventListener('click', () => nextReviewCard())
+
+document.querySelector('.review-arrow-back').addEventListener('click', () => previousReviewCard())
