@@ -593,3 +593,7 @@ h3 {
     transition: background-color 0.3s ease;
     margin-top: 12px;
 }
+
+.flag2 {
+    width: 25px;
+}
