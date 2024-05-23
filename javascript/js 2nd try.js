@@ -103,7 +103,7 @@ function readmore() {
   var gone = document.getElementById("disappear");
   var text = document.getElementById("appear");
   var show = document.getElementsByClassName("readmore")
-  var hide = document.getElementsByClassName("readless"); // Select the first element with class "readless"
+  var hide = document.getElementsByClassName("readless")[0]; // Select the first element with class "readless"
 
   gone.style.display = "none";
   text.style.display = "inline";
@@ -115,7 +115,7 @@ function readless() {
   var gone = document.getElementById("disappear");
   var text = document.getElementById("appear");
   var hide = document.getElementsByClassName("readless")
-  var show = document.getElementsByClassName("readmore"); // Select the first element with class "readmore"
+  var show = document.getElementsByClassName("readmore")[0]; // Select the first element with class "readmore"
 
   gone.style.display = "inline";
   text.style.display = "none";
