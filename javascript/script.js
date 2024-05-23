@@ -53,9 +53,9 @@ brandLogo.forEach(logo => {
     })
 })
 
-const brandLogo2 = document.querySelectorAll('.logo-dk')
+const brandLogoDk = document.querySelectorAll('.logo-dk')
 
-brandLogo.forEach(logo => {
+brandLogoDk.forEach(logo => {
     logo.addEventListener('click', () => {
         window.location.href = 'index.html'
     })
