@@ -233,6 +233,9 @@ h3 {
     cursor: pointer;
 }
 /* dropdown in sidebar */
+#dropdown-btn {
+    cursor: pointer;
+}
 .dropdown-content {
     display: block;
     max-height: 0;
@@ -566,6 +569,9 @@ h3 {
 
 
 /* footer newsletter buttons */
+footer {
+    
+}
 .landing-newsletter2 {
     background-color: white;
     color: rgb(0, 0, 0);
@@ -574,12 +580,23 @@ h3 {
     justify-content: center;
     align-items: center;
     border-radius: 12px;
+    border: 1px dashed var(--brand-dark-blue, #2C3E50);
     padding: 5vw;
     margin-bottom: 2vh;
+    max-width: 500px;
+}
+.landing-newsletter2 p {
+    margin: 0;
+    width: 300px;
+    
+}
+.landing-newsletter2 .email-input {
+    max-width:none;
 }
 .submit-button2 {
     height: 56px;
     width: 70vw;
+    max-width: 100%;
     background-color: var(--orange);
     text-decoration: none;
     color: white;
@@ -613,10 +630,10 @@ h3 {
     align-items: center;
 }
 .currency-toggle-button {
-    min-width: 154px;
-    padding: 10px 20px;
+    min-width: 132px;
+    padding: 8px 16px;
+    font-size: 14px;
     cursor: pointer;
-    font-size: 16px;
     border-radius: 5px;
     background-color: var(--orange);
     font-weight: 600;
@@ -700,3 +717,100 @@ h3 {
 .hidden {
     display: none;
 }
+
+/* ---------------------------------------
+    Prices page
+------------------------------------------ */
+.pricing-dropdown-button {
+    width: 100%;
+    padding: 10px 40px;
+    font-size: 16px;
+    text-align: left;
+    background-color: white;
+    border: 0px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    gap: 6px;
+}
+.dropdown-content-prices {
+    margin: 0 40px 5px 40px;
+    padding: 0px 0 0 20px;
+    border-left: 6px solid var(--orange);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+.dropdown-content-prices p {
+    margin-top: 5px;
+}
+.dropdown-content-prices.open {
+    max-height: 600px;
+}
+.arrow {
+    transition: transform 0.3s;
+}
+
+/* ---------------------------------------
+    Pricing calculator
+------------------------------------------ */
+.calculator-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .calculator-content.open {
+    max-height: 6000px;
+}
+  .header {
+    background-color: #fff;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .container {
+    width: 90%;
+    max-width: 400px;
+    background-color: #fff;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .option-group {
+    margin-bottom: 20px;
+  }
+  .option-group label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  .option-group select, .option-group input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .summary {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .confirm-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .confirm-button:hover {
+    background-color: #45a049;
+  }

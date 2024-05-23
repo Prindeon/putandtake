@@ -170,8 +170,9 @@ toggleButton.addEventListener('click', () => {
     }
 });
 
-
-
+//------------------------------------------|
+// pricing table currency and tab switching |
+//------------------------------------------|
 function showPrices(tab) {
     var tabs = document.querySelectorAll('.tab')
     var tables = document.querySelectorAll('.pricing-table')
@@ -190,3 +191,80 @@ function showPrices(tab) {
     document.getElementById(tab).classList.remove('hidden')
 }
 
+//----------------------------------|
+// dropdown buttons on pricing page |
+//----------------------------------|
+const dropdownButtons = document.querySelectorAll('.pricing-dropdown-button');
+const dropdownContents = document.querySelectorAll('.dropdown-content-prices');
+
+dropdownButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        const dropdownContent = dropdownContents[index];
+        dropdownContent.classList.toggle('open');
+
+        const arrow = button.querySelector('.arrow');
+        if (dropdownContent.classList.contains('open')) {
+            arrow.style.transform = "rotate(180deg)";
+        } else {
+            arrow.style.transform = "rotate(0deg)";
+        }
+    });
+});
+
+//--------------------|
+// Pricing calculator |
+//--------------------|
+const calculatorBtn = document.getElementById('calculatorButton')
+const calculatorContent = document.querySelector('.calculator-content')
+
+calculatorBtn.addEventListener('click', () => {
+    calculatorContent.classList.toggle('open')
+})
+
+const prices = {
+    'base': [120, 140, 160, 180, 200, 260],
+    'children': [60, 70, 80, 90, 100, 130],
+    'extra': 30,
+    'rodRental': 50,
+    'additionalRod': 20
+  };
+
+  function calculateTotal() {
+    const rods = document.getElementById('rods').value;
+    const duration = document.getElementById('duration').value;
+    const children = document.getElementById('children').value;
+    const extraHour = document.getElementById('extra-hour').checked;
+    const fishingRod = document.getElementById('fishing-rod').checked;
+
+    let total = 0;
+    const durationIndex = duration === 'day' ? 5 : parseInt(duration) - 2;
+
+    total += prices['base'][durationIndex];
+
+    if (children > 0) {
+      total += prices['children'][durationIndex] * children;
+    }
+
+    if (rods > 1) {
+      total += prices['additionalRod'] * (rods - 1);
+    }
+
+    if (extraHour) {
+      total += prices['extra'];
+    }
+
+    if (fishingRod) {
+      total += prices['rodRental'];
+    }
+
+    document.getElementById('total-price').textContent = `${total} DKK`;
+  }
+
+  document.getElementById('rods').addEventListener('input', calculateTotal);
+  document.getElementById('duration').addEventListener('change', calculateTotal);
+  document.getElementById('children').addEventListener('input', calculateTotal);
+  document.getElementById('extra-hour').addEventListener('change', calculateTotal);
+  document.getElementById('fishing-rod').addEventListener('change', calculateTotal);
+
+  // Initial calculation on page load
+  calculateTotal();
