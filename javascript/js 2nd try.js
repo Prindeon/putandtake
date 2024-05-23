@@ -14,16 +14,14 @@ function plusSlides(n) {
   SlideShow(slidePosition += n);
 }
 
-
 function currentSlide(n) {
   SlideShow(slidePosition = n);
 }
 
-
 //------------------------------------------------|
 // dots under images and visibility of containers |
 //------------------------------------------------|
-function SlideShow(n) {
+function SlideShow(slideNumber) {
   var i;
   var slides = document.getElementsByClassName("Containers");
   var circles = document.getElementsByClassName("dots");
@@ -33,8 +31,8 @@ function SlideShow(n) {
   var circles5 = document.getElementsByClassName("dots5");
   var circles6 = document.getElementsByClassName("dots6");
   var circles7 = document.getElementsByClassName("dots7");
-  if (n > slides.length) {slidePosition = 1}
-  if (n < 1) {slidePosition = slides.length}
+  if (slideNumber > slides.length) {slidePosition = 1}
+  if (slideNumber < 1) {slidePosition = slides.length}
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
@@ -70,7 +68,6 @@ for (i = 0; i < circles7.length; i++) {
 } 
 
 
-
 //----------------|
 // read more lakes|
 //----------------|
@@ -102,41 +99,4 @@ function readless() {
 
 
 
-function getSlide(){
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get('slide');
-}
 
-function showSlide(slideNumber){
-  // Selecting the fishbox based on the slide number
-  const item = document.querySelectorAll('.Containers');
-  
-  // Adjusting the slide number to match the array index (0-based)
-  const adjustedSlideNumber = slideNumber - 1;
-  
-  // Checking if the slide number is within the valid range
-  if (adjustedSlideNumber >= 0 && adjustedSlideNumber < item.length) {
-    // Scroll to the fishbox corresponding to the slide number
-    item[adjustedSlideNumber].scrollIntoView({ behavior: 'smooth' });
-  }
-}
-
-document.addEventListener('DOMContentLoaded', ()=>{
-  const slideNumber = getSlide();
-  if (slideNumber){
-    showSlide(parseInt(slideNumber)); // Parsing slideNumber as an integer
-  }
-});
-
-// function showSlide(slideNumber){
-//   const carousel = document.getElementsByClassName('slideshow-container fade');
-//   const items = carousel.getElementsByClassName('Containers');
-//   items[slideNumber - 1].scrollIntoView();
-// }
-
-// document.addEventListener('DOMContentLoaded', ()=>{
-//   const slideNumber = getSlideFromUrl();
-//   if (slideNumber){
-//     showSlide(slideNumber);
-//   }
-// })
