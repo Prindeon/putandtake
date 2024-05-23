@@ -187,11 +187,27 @@ p {
   margin: 0;
 }
 
-.appear {
-  display: block;
+.hide {
+  display: none;
 }
 
-.hide {
+#appear {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 5s ease-out;
+  display: none;
+}
+
+#appear.show {
+  max-height: 200px;
+  transition: max-height 5s ease-out;
+  display: inline-block;
+}
+
+#dots {
+  display: inline-block;
+}
+#dots.show {
   display: none;
 }
 
