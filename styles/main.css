@@ -299,13 +299,14 @@ h3 {
 }
 .landing-carousel-item {
     min-width: 100%;
-    position: relative
+    position: relative;
 }
 /* object-fit: cover with 80vh makes sure the images retain the same height and aspect ratio at all times */
 .landing-carousel-item img {
     width: 100%;
     height: 80vh;
     object-fit: cover;
+    object-position: top;
 }
 .landing-ctas {
     position: absolute;
@@ -593,7 +594,25 @@ h3 {
     transition: background-color 0.3s ease;
     margin-top: 12px;
 }
-
 .flag2 {
     width: 25px;
+}
+
+/* ---------------------------------------
+    Prices page
+------------------------------------------ */
+/* Currency toggle switch */
+.currency-toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.currency-toggle-button {
+
+    padding: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid var(--orange);
+    border-radius: 6px;
+    background-color: white;
 }

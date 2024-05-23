@@ -129,7 +129,31 @@ reviewRadioBtns.forEach((radio, review) => {
         showReviewCard(review)
     })
 })
-
 document.querySelector('.review-arrow-forward').addEventListener('click', () => nextReviewCard())
-
 document.querySelector('.review-arrow-back').addEventListener('click', () => previousReviewCard())
+
+//-------------------|
+// currency switcher |
+//-------------------|
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('currencyToggleButton');
+
+    if (toggleButton) {
+        console.log('Button found:', toggleButton);
+
+        toggleButton.addEventListener('click', () => {
+            console.log('Button clicked!');
+            console.log('Current text:', toggleButton.textContent);
+
+            if (toggleButton.textContent === "DKK") {
+                toggleButton.textContent = "EUR";
+                console.log('Text changed to EUR');
+            } else {
+                toggleButton.textContent = "DKK";
+                console.log('Text changed to DKK');
+            }
+        });
+    } else {
+        console.log('Button not found');
+    }
+});
