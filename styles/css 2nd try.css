@@ -174,10 +174,28 @@ p {
     align-self: center;
 }
 
-#readmore {
-    color: #FF6852;
-    font-weight: 500;
+#read-more {
+  color: #FF6852;
+  font-weight: 500;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: underline;
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
 }
+
+.appear {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+
 
 a {
   color: #2C3E50;
@@ -251,10 +269,6 @@ background:linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(146, 146, 146, 0.3)), 
 
 #fishabout {
   flex: 1;
-}
-
-#appear, .readless {
- display: none;
 }
 
 .white {

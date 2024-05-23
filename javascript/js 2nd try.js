@@ -97,20 +97,36 @@ for (i = 0; i < circles7.length; i++) {
 //----------------|
 // read more lakes|
 //----------------|
+    const threeDots = document.getElementById("dots");
+    const text = document.getElementById("appear");
+    const readMoreBtn = document.getElementById("read-more");
+
+    readMoreBtn.addEventListener('click', () => {
+      threeDots.style.display = "none"; // makes 3 dots "..." disappear
+      text.classList.toggle('hide'); // makes the hidden 'extra' text visible
+      window.location.href = 'index-en.html'
+    }); 
 
 
+<<<<<<< Updated upstream
 function readmore() {
   var gone = document.getElementById("disappear");
   var text = document.getElementById("appear");
   var show = document.getElementsByClassName("readmore")
   var hide = document.getElementsByClassName("readless")[0]; // Select the first element with class "readless"
+=======
+>>>>>>> Stashed changes
 
-  gone.style.display = "none";
-  text.style.display = "inline";
-  hide.style.display = "block";
-  show.style.display = "none";
-}
+// readMoreBtn.addEventListener('click', () => {
 
+//   if (this.textContent === "READ MORE") {
+//       this.textContent = "READ LESS";
+//   } else {
+//       this.textContent = "READ MORE";
+//   }
+// })
+
+<<<<<<< Updated upstream
 function readless() {
   var gone = document.getElementById("disappear");
   var text = document.getElementById("appear");
@@ -122,6 +138,8 @@ function readless() {
   show.style.display = "block";
   hide.style.display = "none";
 }
+=======
+>>>>>>> Stashed changes
 
 
 
