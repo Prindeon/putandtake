@@ -71,7 +71,7 @@ h3 {
     align-items: center;
 }
 .primary-button{
-    padding: 16px 48px;
+    padding: 16px 0px;
     background-color: var(--orange);
     text-decoration: none;
     color: white;

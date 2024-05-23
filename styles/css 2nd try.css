@@ -199,7 +199,7 @@ p {
 }
 
 #appear.show {
-  max-height: 200px;
+  max-height: 300px;
   transition: max-height 5s ease-out;
   display: inline-block;
 }
@@ -233,7 +233,6 @@ h5 {
   font-weight: 700;
   letter-spacing: 1px;
   margin-top: 5vw;
-  border: 0ch;
 }
 
 .fishbanner {
