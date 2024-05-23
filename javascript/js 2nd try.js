@@ -19,6 +19,12 @@ function currentSlide(n) {
   SlideShow(slidePosition = n);
 }
 
+$(document).ready(function () {
+  if(window.location.hash){
+     var slideNumber = window.location.hash.substr(1);
+     $('#slider div:nth-child('+slideNumber+')').trigger('tap');
+  }
+});
 
 //------------------------------------------------|
 // dots under images and visibility of containers |
