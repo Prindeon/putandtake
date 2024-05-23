@@ -377,9 +377,8 @@ scrolling fish announcement
 }
 
 /* ---------------------------------------
-Under the fold - landing page
+About us section
 ------------------------------------------ */
-/* About us section */
 .about-us {
     margin: 40px;
     display: flex;
@@ -403,7 +402,9 @@ Under the fold - landing page
     background-color: rgb(245, 245, 245);
 }
 
-/* newsletter section */
+/* ---------------------------------------
+Newsletter section
+------------------------------------------ */
 .landing-newsletter {
     background-color: var(--dark-blue);
     color: white;
@@ -453,6 +454,38 @@ Under the fold - landing page
 }
 .submit-button:hover {
     background-color: var(--hover-orange)
+}
+
+/* ---------------------------------------
+Reviews section
+------------------------------------------ */
+.testimonials-section {
+    display: flex;
+    flex-direction: column;
+    margin: 0 40px;
+}
+.review-card-container {
+    margin-left: auto;
+    margin-right: auto;
+}
+.review-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.25);
+    padding: 20px 32px 60px 32px;
+}
+.review-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 12px, 0 0 0;
+}
+.review-star {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
 }
 
 .landing-newsletter2 {
