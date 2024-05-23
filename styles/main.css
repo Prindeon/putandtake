@@ -389,7 +389,7 @@ h3 {
         transform: translateX(0)
     }
     100% {
-        transform: translateX(-114%);
+        transform: translateX(-100%);
     }
 }
 .scrolling-announcement-text img {
