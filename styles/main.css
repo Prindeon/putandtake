@@ -757,6 +757,13 @@ footer {
 /* ---------------------------------------
     Pricing calculator
 ------------------------------------------ */
+#calculatorButton {
+    border: none;
+    padding: 14px 54px;
+    margin: 40px 0 40px 50%;
+    min-width: 350px;
+    transform: translateX(-50%);
+}
 .calculator-content {
     max-height: 0;
     overflow: hidden;
@@ -775,7 +782,6 @@ footer {
     padding: 20px;
     width: 100%;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   .container {
     width: 90%;
@@ -784,7 +790,6 @@ footer {
     margin-top: 20px;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   .option-group {
     margin-bottom: 20px;
@@ -797,20 +802,28 @@ footer {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
+    border-radius: 12px;
+    border: 1px solid lightgray;
   }
   .summary {
     text-align: center;
     margin-top: 20px;
   }
   .confirm-button {
-    background-color: #4CAF50;
+    background-color: var(--orange);
     color: white;
-    padding: 15px 20px;
+    padding: 16px 64px;
+    font-size: 16px;
     text-align: center;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    margin-left: 50%;
+    transform: translateX(-50%);
   }
-  .confirm-button:hover {
-    background-color: #45a049;
+
+
+
+  .rules {
+    margin-left: 40px;
   }
